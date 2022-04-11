@@ -26,7 +26,11 @@ void setup() {
 //
 void draw() 
 {
-   buttonColour = purple; //Lime
+   if (mouseX> quitButtonX && mouseX< quitButtonX + quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY + quitButtonHeight) {
+     buttonColour = Lime;
+   }else{
+   buttonColour = purple;
+   }
    fill(buttonColour);
    rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
    fill(resetWhite);
